@@ -112,3 +112,19 @@ music paths in public evidence.
 When the exercise is over, save the redacted results before removing temporary
 build artifacts. Stop/deallocate or remove the dedicated cloud resources when
 no longer needed; deleting a local build does not stop cloud charges.
+
+## Optional seeking fixture
+
+For the still-unperformed seeking case, generate a synthetic 60-second WAV:
+
+```sh
+python scripts/generate-relay-test-tone.py /path/to/new-test-tone.wav
+```
+
+The destination parent must exist. The script refuses to overwrite an existing
+file. Import the resulting file on one device, expose it to the paired peer,
+and seek from the other device. Each 15-second segment rises one semitone from
+440 Hz, making position changes easier to hear. Use a low playback volume.
+The generator was locally checked for WAV format, duration and overwrite
+refusal; it was added after the reported two-device exercise. This fixture is
+not evidence that seeking has already passed.
