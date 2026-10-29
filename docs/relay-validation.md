@@ -71,7 +71,7 @@ prove that the paired-device session or music stream uses the relay.
 | Public TCP reachability | Connection to port 22067 succeeded; this is not a TLS or relay-session test. |
 | Initial failure | First client displayed `Relay unavailable: tls handshake eof`; cause was not established. |
 | Pairing | A paired peer with full trust was present in the first client's local database. |
-| Same-LAN relay session | User reports the peer transport displayed Relay while both computers were on the same LAN. |
+| Same-LAN direct session | User clarified that the same-LAN connection was direct, not relayed. |
 | Different-network relay session | User reports Relay with computer 1 on a phone hotspot and computer 2 on the campus network. |
 | Audible remote playback and controls | User reports audible playback and linked music controls between the two computers, including starting and stopping together. |
 | Remote catalogue | Second-device operator reported exposing three generated test tones; exact first-device browse contents were not separately confirmed. |
@@ -79,7 +79,7 @@ prove that the paired-device session or music stream uses the relay.
 | Disconnect and reconnect | Not confirmed separately. |
 | Rust tests for this commit | Not rerun for this submission. |
 
-The same-LAN and different-network outcomes above are user-reported manual
+The same-LAN direct and different-network relay outcomes above are user-reported manual
 results. No packet capture, timing measurements or independent visual recording
 was retained. Starting/stopping together is an observed functional result,
 not a claim of measured sample-accurate synchronization. The earlier TLS EOF
